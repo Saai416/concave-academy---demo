@@ -548,37 +548,48 @@ function Programs() {
   );
 }
 
+// ─── Gallery ──────────────────────────────────────────────────────────────────
 const galleryImages = [
   {
-    src: "gallery/image1.jpeg",
+    src: "/gallery/image1.jpeg",
     alt: "Classroom teaching",
+    span: "row-span-2",
   },
   {
-    src: "gallery/image2.jpeg",
+    src: "/gallery/image2.jpeg",
     alt: "Students studying",
+    span: "",
   },
   {
-    src: "gallery/image3.jpeg",
+    src: "/gallery/image3.jpeg",
     alt: "Mental arithmetic",
+    span: "",
   },
   {
-    src: "gallery/image4.jpeg",
+    src: "/gallery/image4.jpeg",
     alt: "Learning space",
+    span: "row-span-2",
   },
   {
-    src: "gallery/image5.jpeg",
+    src: "/gallery/image5.jpeg",
     alt: "Focused student",
+    span: "",
   },
 ];
 
 function Gallery() {
+  const { ref, visible } = useInView(0.1);
   return (
     <section
+      ref={ref}
       id="gallery"
+      data-ocid="gallery.section"
       className="py-24 bg-gradient-to-b from-muted/30 to-background"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-14">
+        <div
+          className={`text-center mb-14 transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
+        >
           <div className="w-8 h-1 bg-accent rounded-full mx-auto mb-4" />
           <h2 className="text-3xl sm:text-4xl font-poppins font-bold text-foreground">
             Our Learning Space
@@ -588,37 +599,24 @@ function Gallery() {
           </p>
         </div>
         {/* Masonry grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
-          <div className="flex flex-col gap-4">
-            {galleryImages.filter((_, i) => i % 2 === 0).map((img) => (
-              <div
-                key={img.src}
-                className="overflow-hidden rounded-2xl group cursor-pointer relative min-h-[150px] bg-muted/20 border border-border/10"
-              >
-                <img
-                  src={img.src}
-                  alt={img.alt}
-                  className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105 block"
-                  loading="eager"
-                />
-              </div>
-            ))}
-          </div>
-          <div className="flex flex-col gap-4">
-            {galleryImages.filter((_, i) => i % 2 === 1).map((img) => (
-              <div
-                key={img.src}
-                className="overflow-hidden rounded-2xl group cursor-pointer relative min-h-[150px] bg-muted/20 border border-border/10"
-              >
-                <img
-                  src={img.src}
-                  alt={img.alt}
-                  className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105 block"
-                  loading="eager"
-                />
-              </div>
-            ))}
-          </div>
+        <div
+          className={`grid grid-cols-2 md:grid-cols-3 gap-4 auto-rows-[200px] transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+          style={{ transitionDelay: "150ms" }}
+        >
+          {galleryImages.map((img, i) => (
+            <div
+              key={img.src}
+              data-ocid={`gallery.item.${i + 1}`}
+              className={`overflow-hidden rounded-2xl group cursor-pointer ${img.span}`}
+            >
+              <img
+                src={img.src}
+                alt={img.alt}
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                loading="lazy"
+              />
+            </div>
+          ))}
         </div>
       </div>
     </section>
