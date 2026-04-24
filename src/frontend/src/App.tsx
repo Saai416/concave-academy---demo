@@ -566,12 +566,12 @@ const galleryImages = [
     span: "",
   },
   {
-    src: "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=700&q=80",
+    src: "gallery/image1.png",
     alt: "Modern learning space",
     span: "row-span-2",
   },
   {
-    src: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=500&q=80",
+    src: "gallery/image2.jpeg",
     alt: "Focused student",
     span: "",
   },
