@@ -599,12 +599,14 @@ function Gallery() {
             {galleryImages.filter((_, i) => i % 2 === 0).map((img, i) => (
               <div
                 key={img.src}
-                className="overflow-hidden rounded-2xl group cursor-pointer relative"
+                className="overflow-hidden rounded-2xl group cursor-pointer relative min-h-[150px] bg-muted/20 flex items-center justify-center shadow-subtle border border-border"
               >
                 <img
                   src={img.src}
                   alt={img.alt}
-                  className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105 block"
+                  loading="eager"
+                  fetchPriority="high"
                 />
               </div>
             ))}
@@ -613,12 +615,14 @@ function Gallery() {
             {galleryImages.filter((_, i) => i % 2 === 1).map((img, i) => (
               <div
                 key={img.src}
-                className="overflow-hidden rounded-2xl group cursor-pointer relative"
+                className="overflow-hidden rounded-2xl group cursor-pointer relative min-h-[150px] bg-muted/20 flex items-center justify-center shadow-subtle border border-border"
               >
                 <img
                   src={img.src}
                   alt={img.alt}
-                  className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105 block"
+                  loading="eager"
+                  fetchPriority="high"
                 />
               </div>
             ))}
