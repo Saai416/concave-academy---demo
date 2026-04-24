@@ -548,32 +548,45 @@ function Programs() {
   );
 }
 
-// ─── Gallery ──────────────────────────────────────────────────────────────────
 const galleryImages = [
   {
-    src: "/gallery/image1.jpeg",
+    src: "gallery/image1.jpeg",
     alt: "Classroom teaching",
   },
   {
-    src: "/gallery/image2.jpeg",
+    src: "gallery/image2.jpeg",
     alt: "Students studying",
   },
   {
-    src: "/gallery/image3.jpeg",
+    src: "gallery/image3.jpeg",
     alt: "Mental arithmetic",
   },
   {
-    src: "/gallery/image4.jpeg",
+    src: "gallery/image4.jpeg",
     alt: "Learning space",
   },
   {
-    src: "/gallery/image5.jpeg",
+    src: "gallery/image5.jpeg",
     alt: "Focused student",
   },
 ];
 
 function Gallery() {
-  const { ref, visible } = useInView(0.1);
+  const { ref, visible: inView } = useInView(0.01);
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    const handleLoad = () => setLoaded(true);
+    if (document.readyState === "complete") {
+      handleLoad();
+    } else {
+      window.addEventListener("load", handleLoad);
+      return () => window.removeEventListener("load", handleLoad);
+    }
+  }, []);
+
+  const visible = inView || loaded;
+
   return (
     <section
       ref={ref}
