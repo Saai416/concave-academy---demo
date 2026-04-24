@@ -595,20 +595,19 @@ function Gallery() {
         </div>
         {/* Masonry grid */}
         <div
-          className={`columns-2 md:columns-3 gap-4 space-y-4 transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+          className={`columns-2 md:columns-3 gap-4 transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
           style={{ transitionDelay: "150ms" }}
         >
           {galleryImages.map((img, i) => (
             <div
               key={img.src}
               data-ocid={`gallery.item.${i + 1}`}
-              className="overflow-hidden rounded-2xl group cursor-pointer break-inside-avoid relative"
+              className="inline-block w-full mb-4 overflow-hidden rounded-2xl group cursor-pointer break-inside-avoid relative"
             >
               <img
                 src={img.src}
                 alt={img.alt}
                 className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
-                loading="lazy"
               />
             </div>
           ))}
