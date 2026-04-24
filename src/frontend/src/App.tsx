@@ -572,32 +572,13 @@ const galleryImages = [
 ];
 
 function Gallery() {
-  const { ref, visible: inView } = useInView(0.01);
-  const [loaded, setLoaded] = useState(false);
-
-  useEffect(() => {
-    const handleLoad = () => setLoaded(true);
-    if (document.readyState === "complete") {
-      handleLoad();
-    } else {
-      window.addEventListener("load", handleLoad);
-      return () => window.removeEventListener("load", handleLoad);
-    }
-  }, []);
-
-  const visible = inView || loaded;
-
   return (
     <section
-      ref={ref}
       id="gallery"
-      data-ocid="gallery.section"
       className="py-24 bg-gradient-to-b from-muted/30 to-background"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div
-          className={`text-center mb-14 transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
-        >
+        <div className="text-center mb-14">
           <div className="w-8 h-1 bg-accent rounded-full mx-auto mb-4" />
           <h2 className="text-3xl sm:text-4xl font-poppins font-bold text-foreground">
             Our Learning Space
@@ -609,33 +590,31 @@ function Gallery() {
         {/* Masonry grid */}
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
           <div className="flex flex-col gap-4">
-            {galleryImages.filter((_, i) => i % 2 === 0).map((img, i) => (
+            {galleryImages.filter((_, i) => i % 2 === 0).map((img) => (
               <div
                 key={img.src}
-                className="overflow-hidden rounded-2xl group cursor-pointer relative min-h-[150px] bg-muted/20 flex items-center justify-center shadow-subtle border border-border"
+                className="overflow-hidden rounded-2xl group cursor-pointer relative min-h-[150px] bg-muted/20 border border-border/10"
               >
                 <img
                   src={img.src}
                   alt={img.alt}
                   className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105 block"
                   loading="eager"
-                  fetchPriority="high"
                 />
               </div>
             ))}
           </div>
           <div className="flex flex-col gap-4">
-            {galleryImages.filter((_, i) => i % 2 === 1).map((img, i) => (
+            {galleryImages.filter((_, i) => i % 2 === 1).map((img) => (
               <div
                 key={img.src}
-                className="overflow-hidden rounded-2xl group cursor-pointer relative min-h-[150px] bg-muted/20 flex items-center justify-center shadow-subtle border border-border"
+                className="overflow-hidden rounded-2xl group cursor-pointer relative min-h-[150px] bg-muted/20 border border-border/10"
               >
                 <img
                   src={img.src}
                   alt={img.alt}
                   className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105 block"
                   loading="eager"
-                  fetchPriority="high"
                 />
               </div>
             ))}
