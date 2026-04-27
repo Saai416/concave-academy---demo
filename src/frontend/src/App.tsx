@@ -388,12 +388,12 @@ const programs = [
   },
   {
     icon: FlaskConical,
-    title: <> Physics (8–12)</>,
-    desc: "Master Physics concepts with live demonstrations and expert teaching. Focused on board exams and competitive foundations.",
+    title: <> Physics & Chemistry (8–12)</>,
+    desc: "Master Physics and Chemistry concepts with live demonstrations and expert teaching. Focused on board exams and competitive foundations.",
     tag: "Both online and offline Classes",
     image:
       "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=600&q=80",
-    imageAlt: "Physics",
+    imageAlt: "Physics & Chemistry",
   },
   {
     icon: Target,
