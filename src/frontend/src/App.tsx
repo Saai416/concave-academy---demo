@@ -39,7 +39,7 @@ function useInView(threshold = 0.15) {
 }
 
 const WA_LINK =
-  "https://wa.me/919080583518?text=Hi%2C%20I%20am%20interested%20in%20Green%20Thumb%20Academy.%20Please%20share%20details.";
+  "https://wa.me/919962283139?text=Hi%2C%20I%20am%20interested%20in%20joining%20CONCAVE%20MINDS%20ACADEMY%20online%20classes.";
 
 // ─── Navbar ───────────────────────────────────────────────────────────────────
 function Navbar() {
@@ -63,15 +63,15 @@ function Navbar() {
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           className="flex items-center gap-2 group"
         >
-          <div className="p-1.5 rounded-lg transition-smooth bg-primary/10">
+          <div className="p-1.5 rounded-xl transition-smooth shadow-sm bg-primary/10 border border-primary/20">
             <GraduationCap className="w-5 h-5 text-primary" />
           </div>
           <div className="leading-tight">
-            <span className="font-poppins font-700 text-sm sm:text-base font-bold tracking-tight text-foreground">
-              GREEN THUMB ACADEMY
+            <span className="font-poppins text-sm sm:text-lg font-extrabold tracking-[0.1em] text-foreground uppercase">
+              CONCAVE MINDS ACADEMY
             </span>
             <span className="hidden sm:block text-xs text-muted-foreground">
-              Chennai
+              Chennai & Global Online
             </span>
           </div>
         </button>
@@ -99,12 +99,12 @@ function Navbar() {
         {/* Desktop CTAs */}
         <div className="hidden md:flex items-center gap-3">
           <a
-            href="tel:09080583518"
+            href="tel:09962283139"
             data-ocid="navbar.call_button"
             className="flex items-center gap-1.5 text-sm font-medium px-3 py-1.5 rounded-lg transition-smooth text-primary border border-primary/30 hover:bg-primary/5"
           >
             <Phone className="w-3.5 h-3.5" />
-            090805 83518
+            099622 83139
           </a>
           <a
             href={WA_LINK}
@@ -149,11 +149,11 @@ function Navbar() {
             </button>
           ))}
           <a
-            href="tel:09080583518"
+            href="tel:09962283139"
             className="flex items-center gap-2 text-sm font-medium text-primary py-2"
           >
             <Phone className="w-4 h-4" />
-            090805 83518
+            099622 83139
           </a>
           <a
             href={WA_LINK}
@@ -162,7 +162,7 @@ function Navbar() {
             className="flex items-center justify-center gap-2 bg-green-500 text-white text-sm font-semibold px-4 py-2.5 rounded-lg"
           >
             <FaWhatsapp className="w-4 h-4" />
-            Chat on WhatsApp
+            Join Online Class
           </a>
         </div>
       )}
@@ -176,7 +176,7 @@ function Hero() {
     <section
       id="hero"
       data-ocid="hero.section"
-      className="relative h-screen min-h-[600px] md:h-screen flex items-end pt-24 pb-20 md:pb-28 overflow-hidden"
+      className="relative min-h-[700px] h-screen flex items-center pt-32 pb-20 md:pb-28 overflow-hidden"
     >
       {/* Background image */}
       <div className="absolute inset-0">
@@ -192,7 +192,7 @@ function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full mt-16 md:mt-0">
         {/* Rating badge */}
         <div
           className="inline-flex items-center gap-2 glassmorphic-dark rounded-full px-4 py-2 mb-6"
@@ -206,19 +206,19 @@ function Hero() {
 
         {/* Headline */}
         <h1
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-poppins font-bold text-white leading-tight mb-4 max-w-4xl"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-poppins font-bold text-white leading-tight mb-4 max-w-4xl"
         >
-          Best Tuition Centre for
+          Flexible Online & Offline Learning for
           <br />
-          <span className="text-white">Academic Excellence</span>
+          <span className="text-white">Students Around the World</span>
         </h1>
 
         {/* Subheading */}
         <p
           className="text-white/80 text-lg sm:text-xl font-inter mb-6 max-w-xl"
         >
-          Strong fundamentals. Better results. Confident students.<br />
-          Special focus on Phonics & Hindi learning.
+          Live interactive coaching from India for students worldwide.<br />
+          Learn anytime, anywhere with structured, concept-based teaching.
         </p>
 
         {/* Announcement Badge */}
@@ -227,7 +227,7 @@ function Hero() {
           style={{ animation: "fade-in-up 0.6s 0.25s ease-out both" }}
         >
           <span className="flex items-center justify-center h-6 px-2.5 rounded-full bg-accent text-accent-foreground font-bold text-[10px] uppercase tracking-wider">New</span>
-          Accounts classes for 10th & 12th students now available.
+          Free demo sessions for international students now available.
         </div>
 
         {/* CTA Buttons */}
@@ -242,15 +242,15 @@ function Hero() {
             className="flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold font-poppins text-base px-7 py-3.5 rounded-xl transition-smooth shadow-elevated"
           >
             <FaWhatsapp className="w-5 h-5" />
-            Chat on WhatsApp
+            Join Online Class
           </a>
           <a
-            href="tel:09080583518"
+            href="tel:09962283139"
             data-ocid="hero.call_button"
             className="flex items-center justify-center gap-2 border-2 border-white/60 text-white hover:bg-white/10 font-semibold font-poppins text-base px-7 py-3.5 rounded-xl transition-smooth"
           >
             <Phone className="w-5 h-5" />
-            Call Now
+            Book Free Demo Session
           </a>
         </div>
       </div>
@@ -260,10 +260,10 @@ function Hero() {
 
 // ─── Trust Strip ──────────────────────────────────────────────────────────────
 const trustItems = [
-  { icon: BookOpen, label: "Expert Teaching" },
-  { icon: TrendingUp, label: "Strong Results" },
-  { icon: Users, label: "Personalized Attention" },
-  { icon: Target, label: "Discipline Focus" },
+  { icon: BookOpen, label: "Live Interactive Classes" },
+  { icon: TrendingUp, label: "Expert Indian Faculty" },
+  { icon: Users, label: "Global Student Reach" },
+  { icon: Target, label: "Flexible Online Timings" },
 ];
 
 function TrustStrip() {
@@ -322,7 +322,7 @@ function SplitSection() {
             <div className="absolute bottom-6 left-6 glassmorphic-dark rounded-2xl px-5 py-3">
               <p className="text-white font-poppins font-bold text-2xl">500+</p>
               <p className="text-white/80 text-xs font-inter">
-                Students Mentored
+                Students Worldwide
               </p>
             </div>
           </div>
@@ -334,21 +334,21 @@ function SplitSection() {
         >
           <div className="w-12 h-1 bg-accent rounded-full mb-6" />
           <h2 className="text-3xl sm:text-4xl font-poppins font-bold text-foreground mb-5 leading-tight">
-            Focused
+            Global
             <br />
-            <span className="text-primary">Coaching</span>
+            <span className="text-primary">Online Academy</span>
           </h2>
           <p className="text-muted-foreground font-inter text-base leading-relaxed mb-8">
-            We help students build strong concepts and discipline for long-term
-            success. Every student receives individual attention to bridge gaps
-            and develop genuine understanding — not just exam preparation.
+            We provide India's expert teaching to students worldwide through our
+            live interactive online platform. Our goal is to build a strong
+            academic foundation in Maths & Physics for long-term success.
           </p>
           <ul className="space-y-3">
             {[
-              "Concept-first teaching approach",
-              "Regular assessments & feedback",
-              "Small batches for focused attention",
-              "Exam-pattern practice included",
+              "Expert tutors from India",
+              "Live interactive online sessions",
+              "Flexible timings for international students",
+              "Strong focus on Maths & Physics",
             ].map((item) => (
               <li
                 key={item}
@@ -379,106 +379,42 @@ function SplitSection() {
 const programs = [
   {
     icon: Calculator,
-    title: <>All Subjects Tuition</>,
-    desc: "State Board, CBSE, and ICSE. From algebra to calculus, we ensure complete concept clarity.",
-    tag: "Tuition",
+    title: <> Mathematics (8–12)</>,
+    desc: "Comprehensive coaching for class 8-12. We ensure deep concept clarity in Algebra, Calculus, and Geometry for global curricula.",
+    tag: "Both online and offline Classes",
     image:
-      "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=600&q=80",
-    imageAlt: "Tuition",
+      "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=600&q=80",
+    imageAlt: "Mathematics",
   },
   {
     icon: FlaskConical,
-    title: <>Hindi <span className="ml-2 inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-accent text-accent-foreground uppercase">Popular</span></>,
-    desc: "Language program focusing on speaking, reading, and writing.",
-    tag: "Language",
+    title: <> Physics (8–12)</>,
+    desc: "Master Physics concepts with live demonstrations and expert teaching. Focused on board exams and competitive foundations.",
+    tag: "Both online and offline Classes",
     image:
-      "https://images.unsplash.com/photo-1657302155485-790b74d0b5d1?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    imageAlt: "Hindi",
-
+      "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=600&q=80",
+    imageAlt: "Physics",
   },
   {
     icon: Target,
-    title: <>Karate<span className="ml-2 inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-accent text-accent-foreground uppercase">Popular</span></>,
-    desc: "Physical fitness, self defense and discipline.",
-    tag: "Sports",
+    title: <>Board Exam Preparation</>,
+    desc: "Specialized coaching for CBSE, State, and International boards. Focused on scoring high with structured practice.",
+    tag: "Exam Focused",
     image:
-      "https://images.unsplash.com/photo-1555597673-b21d5c935865?w=600&q=80",
-    imageAlt: "Karate",
-  },
-  {
-    icon: FlaskConical,
-    title: <>Phonics <span className="ml-2 inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-accent text-accent-foreground uppercase">Popular</span></>,
-    desc: "Reading, writing, and spelling foundations.",
-    tag: "Language",
-    image:
-      "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=600&q=80",
-    imageAlt: "Phonics",
-  },
-  {
-    icon: Target,
-    title: <>Abacus</>,
-    desc: "A proven method to enhance brain development, concentration, and mental arithmetic skills for young learners.",
-    tag: "Mental Arithmetic",
-    image:
-      "https://images.unsplash.com/photo-1518133910546-b6c2fb7d79e3?w=600&q=80",
-    imageAlt: "Abacus",
-  },
-  {
-    icon: Star,
-    title: <>Vedic Maths</>,
-    desc: "Learn ancient techniques for ultra-fast calculations.",
-    tag: "Speed Maths",
-    image:
-      "https://images.unsplash.com/photo-1596495578065-6e0763fa1178?w=600&q=80",
-    imageAlt: "Vedic Maths",
-  },
-  {
-    icon: Star,
-    title: <>Yoga</>,
-    desc: "Physical and mental focus for a balanced lifestyle.",
-    tag: "Wellness",
-    image:
-      "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&q=80",
-    imageAlt: "Yoga",
-  },
-
-  {
-    icon: Star,
-    title: <>Drawing</>,
-    desc: "Creative expression and artistic foundations.",
-    tag: "Arts",
-    image:
-      "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=600&q=80",
-    imageAlt: "Drawing",
-  },
-  {
-    icon: Star,
-    title: <>Keyboard</>,
-    desc: "Musical foundation and keyboard playing skills.",
-    tag: "Music",
-    image:
-      "https://images.unsplash.com/photo-1552422535-c45813c61732?w=600&q=80",
-    imageAlt: "Keyboard",
-  },
-  {
-    icon: Star,
-    title: <>Guitar</>,
-    desc: "Acoustic guitar lessons for all ages.",
-    tag: "Music",
-    image:
-      "https://images.unsplash.com/photo-1510915361894-db8b60106cb1?w=600&q=80",
-    imageAlt: "Guitar",
+      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&q=80",
+    imageAlt: "Exam Preparation",
   },
   {
     icon: BookOpen,
-    title: <>Accounts (for 10th & 12th) <span className="ml-2 inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-primary text-white uppercase">New</span></>,
-    desc: "Focused coaching for board exams and commerce fundamentals.",
-    tag: "Commerce",
+    title: <>Revision & Crash Courses</>,
+    desc: "Quick, intensive online revision modules for last-minute prep and concept brush-up before exams.",
+    tag: "Fast Track",
     image:
-      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&q=80",
-    imageAlt: "Accounts",
+      "https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?w=600&q=80",
+    imageAlt: "Crash Course",
   },
 ];
+
 
 function Programs() {
   const { ref, visible } = useInView();
@@ -551,36 +487,37 @@ function Programs() {
 // ─── Gallery ──────────────────────────────────────────────────────────────────
 const galleryImages = [
   {
-    src: "gallery/image3.jpeg",
-    alt: "Classroom teaching on digital board",
+    src: "gallery/image1.png",
+    alt: "Expert instruction session",
     span: "row-span-2",
   },
   {
-    src: "gallery/image4.jpeg",
-    alt: "Group of students studying together",
+    src: "gallery/image2.png",
+    alt: "Focused students during class",
     span: "",
   },
   {
-    src: "gallery/image5.jpeg",
-    alt: "Student doing mental arithmetic using an abacus",
+    src: "gallery/image3.png",
+    alt: "Academy Branding",
     span: "",
+  },
+  {
+    src: "gallery/image4.png",
+    alt: "Modern learning classroom",
+    span: "row-span-2",
   },
   {
     src: "gallery/image1.png",
-    alt: "Modern learning space",
-    span: "row-span-2",
-  },
-  {
-    src: "gallery/image2.jpeg",
-    alt: "Focused student",
+    alt: "Peer learning and discussion",
     span: "",
   },
   {
-    src: "gallery/image6.png",
-    alt: "Students at work",
+    src: "gallery/image2.png",
+    alt: "Collaborative study environment",
     span: "",
   },
 ];
+
 
 function Gallery() {
   const { ref, visible } = useInView(0.1);
@@ -633,29 +570,29 @@ function Gallery() {
 // ─── Differentiators ──────────────────────────────────────────────────────────
 const differentiators = [
   {
-    title: "Dedicated Teaching",
-    desc: "Every student receives genuine care and focused attention throughout their learning journey.",
+    title: "Global Reach",
+    desc: "Teaching students across UAE, Singapore, UK, US, and more with flexible online scheduling.",
     image:
       "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=400&q=80",
     imageAlt: "Teacher at whiteboard with students",
   },
   {
-    title: "Concept Clarity",
-    desc: "We build intuition and understanding, not rote memorization. Students learn the 'why' behind every formula.",
+    title: "Concept Focus",
+    desc: "We build deep intuition in Maths & Physics, helping students understand the 'why' behind every concept.",
     image:
       "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&q=80",
     imageAlt: "Students collaborating and having an aha moment",
   },
   {
-    title: "Discipline Focus",
-    desc: "Structured schedules and regular practice build academic discipline that benefits students beyond exams.",
+    title: "Live Interaction",
+    desc: "Small batch online sessions ensure every student can interact directly with our expert Indian faculty.",
     image:
       "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=400&q=80",
     imageAlt: "Students in a structured classroom setting",
   },
   {
-    title: "Modern Methods",
-    desc: "Visual teaching tools, problem-solving frameworks, and modern techniques for today's learners.",
+    title: "Performance Tracking",
+    desc: "Weekly online tests and regular assessments to track and improve student performance globally.",
     image:
       "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&q=80",
     imageAlt: "Modern teaching tools and digital board",
@@ -716,21 +653,21 @@ function Differentiators() {
 const testimonials = [
   {
     quote:
-      "It is the best tuition because it has not only improved my studies but also built my confidence.",
-    reviewer: "Abhinav Kaimal",
-    initial: "A",
+      "This coaching academy has excellent teachers with strong skills.",
+    reviewer: "Priya Sharma",
+    initial: "P",
   },
   {
     quote:
-      "Your teaching style is not only effective but also incredibly nurturing, making learning enjoyable.",
-    reviewer: "subha shiny",
-    initial: "S",
-  },
-  {
-    quote:
-      "Best Teaching and Excellent yoga Class and other Classes Super 👌👍✨",
-    reviewer: "Rekha Magesh",
+      "Great work by brilliant tutors.",
+    reviewer: "Rajesh Kumar",
     initial: "R",
+  },
+  {
+    quote:
+      "Excellent teaching quality. It has significantly improved my daughter's board exam prep.",
+    reviewer: "Sanjana V",
+    initial: "S",
   },
 ];
 
@@ -851,7 +788,7 @@ function Contact() {
         >
           <div className="w-8 h-1 bg-accent rounded-full mx-auto mb-4" />
           <h2 className="text-3xl sm:text-4xl font-poppins font-bold text-foreground">
-            Find Us
+            Global Headquarters
           </h2>
         </div>
         <div
@@ -870,7 +807,7 @@ function Contact() {
                 </div>
                 <div>
                   <p className="text-xs text-muted-foreground font-inter mb-0.5">
-                    Address
+                    Academy Headquarters
                   </p>
                   <p className="text-foreground font-inter text-sm leading-relaxed">
                     5, Devaraj Nagar 2nd St,
@@ -890,11 +827,11 @@ function Contact() {
                     Phone
                   </p>
                   <a
-                    href="tel:09080583518"
+                    href="tel:09962283139"
                     data-ocid="contact.call_button"
                     className="text-primary font-inter font-semibold text-sm hover:underline"
                   >
-                    090805 83518
+                    099622 83139
                   </a>
                 </div>
               </li>
@@ -914,7 +851,7 @@ function Contact() {
             </ul>
             <div className="mt-8 flex flex-col sm:flex-row gap-3">
               <a
-                href="tel:09080583518"
+                href="tel:09962283139"
                 data-ocid="contact.call_cta_button"
                 className="flex items-center justify-center gap-2 border border-primary text-primary font-poppins font-semibold text-sm px-5 py-2.5 rounded-xl hover:bg-primary/5 transition-smooth"
               >
@@ -929,7 +866,7 @@ function Contact() {
                 className="flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white font-poppins font-semibold text-sm px-5 py-2.5 rounded-xl transition-smooth"
               >
                 <FaWhatsapp className="w-4 h-4" />
-                Chat on WhatsApp
+                Join Online Class
               </a>
             </div>
           </div>
@@ -940,7 +877,7 @@ function Contact() {
             style={{ height: "360px" }}
           >
             <iframe
-              title="Green Thumb Academy Location"
+              title="CONCAVE MINDS ACADEMY Location"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d971.8!2d80.2437!3d12.9165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sPallikaranai%2C+Chennai!5e0!3m2!1sen!2sin!4v1234567890"
               width="100%"
               height="100%"
@@ -965,16 +902,16 @@ function Footer() {
         <div className="flex items-center justify-center gap-2 mb-3">
           <GraduationCap className="w-5 h-5 text-white/70" />
           <span className="text-white font-poppins font-semibold text-base">
-            Green Thumb Academy
+            CONCAVE MINDS ACADEMY
           </span>
         </div>
         <p className="text-white/60 font-inter text-xs mb-2">
           5, Devaraj Nagar 2nd St, Sai Balaji Nagar, Pallikaranai, Chennai, Tamil Nadu 600100
         </p>
-        <p className="text-white/60 font-inter text-xs mb-5">090805 83518</p>
+        <p className="text-white/60 font-inter text-xs mb-5">099622 83139</p>
         <div className="border-t border-white/10 pt-5">
           <p className="text-white/40 font-inter text-xs">
-            © {year} Green Thumb Academy. All rights reserved.
+            © {year} CONCAVE MINDS ACADEMY. All rights reserved.
           </p>
         </div>
       </div>
